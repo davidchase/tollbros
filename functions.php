@@ -430,8 +430,8 @@ function tollbros_comments() {
 function tollbros_slider() {
 		$options = get_option('tollbros_theme_options');
 	 	echo '<img alt="slider1"  src="'.$options['slider'].'"'.'/>';
-		echo '<img alt="slider2" src="'.$options['slider2'].'"'.' />';
-		echo '<img alt="slider3" src="'.$options['slider3'].'"'.' />';
+		echo '<img alt="slider2" src="'.$options['slider2'].'"'.' style="display:none;"/>';
+		echo '<img alt="slider3" src="'.$options['slider3'].'"'.' style="display:none;"/>';
 		
 }
 
@@ -448,7 +448,7 @@ function tollbros_add_css() {
 add_action('admin_menu','tollbros_add_css');
 
 
-// Function/Hook to remove unnecessary stuff from wp_head()
+// Function/Hook to remove unnecessary	 stuff from wp_head()
 function tollbros_rmheadlink() {
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');

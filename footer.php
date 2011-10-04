@@ -8,20 +8,20 @@
 ?>
 	</div><!-- #main -->
 
-	<div id="footer" role="contentinfo">
-		<div id="colophon">
+	<div id="footer">
+		<div id="copyright">
 
 <?php
 	// sidebar in footer apply using widgets
 	get_sidebar( 'footer' );
 ?>
 
-			<div id="site-generator">
+			<div id="credits">
 				<?php do_action( 'tollbros_credits' ); ?>
 				<a target="_blank" href="<?php echo esc_url( __( 'http://www.tollbrothers.com', 'tollbros' ) ); ?>" title="<?php esc_attr_e( 'Toll Brothers Inc', 'tollbros' ); ?>" rel="author"><?php tollbros_footer_copy(); ?></a>
-			</div><!-- #site-generator -->
+			</div><!-- #credits -->
 
-		</div><!-- #colophon -->
+		</div><!-- #copyright -->
 	</div><!-- #footer -->
 
 </div><!-- #wrapper -->

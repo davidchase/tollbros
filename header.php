@@ -40,10 +40,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="wrapper" class="hfeed">
+<div id="wrapper">
 	<div id="header">
-		<div id="masthead">
-			<div id="branding" role="banner">
+			<div id="logo">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
 					<span>
@@ -53,11 +52,10 @@
 
 					<?php wp_nav_menu(); ?>
 				
-			</div><!-- #branding -->
+			</div><!-- #logo -->
 			<div class="header_slider">
 					<?php tollbros_slider(); ?>
 			</div>
-		</div><!-- #masthead -->
 	</div><!-- #header -->
 
 	<div id="main">

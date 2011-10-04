@@ -119,8 +119,8 @@ textarea,
 }
 h3#comments-title,
 h3#reply-title,
-#access .menu,
-#access div.menu ul,
+#navi .menu,
+#navi div.menu ul,
 #cancel-comment-reply-link,
 .form-allowed-tags,
 #site-info,
@@ -159,10 +159,10 @@ code {
 -------------------------------------------------------------- */
 
 /* The main theme structure */
-#access .menu-header,
+#navi .menu-header,
 div.menu,
-#colophon,
-#branding,
+#copyright,
+#logo,
 #main,
 #wrapper {
 	margin: 0 auto;
@@ -195,7 +195,7 @@ div.menu,
 	font-weight: bold;
 	width: 700px;
 }
-#site-generator {
+#credits {
 	float: left;
 	width: 220px;
 }
@@ -367,7 +367,7 @@ a:hover {
 }
 
 /* This is the custom header image */
-#branding img {
+#logo img {
 	display: block;
 	float: left;
 }
@@ -376,37 +376,37 @@ a:hover {
 /* =Menu
 -------------------------------------------------------------- */
 
-#access {
+#navi {
 	background: #555;
 	display: block;
 	float: left;
 	margin: 0 auto;
 	width: 960px;
 }
-#access .menu-header,
+#navi .menu-header,
 div.menu {
 	font-size: 13px;
 	margin-left: 12px;
 	width: 928px;
 }
-#access .menu-header ul,
+#navi .menu-header ul,
 div.menu ul {
 	list-style: none;
 	margin: 0;
 }
-#access .menu-header li,
+#navi .menu-header li,
 div.menu li {
 	float: left;
 	position: relative;
 }
-#access a {
+#navi a {
 	color: #aaa;
 	display: block;
 	line-height: 38px;
 	padding: 0 10px;
 	text-decoration: none;
 }
-#access ul ul {
+#navi ul ul {
 	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
@@ -418,39 +418,39 @@ div.menu li {
 	width: 180px;
 	z-index: 99999;
 }
-#access ul ul li {
+#navi ul ul li {
 	min-width: 180px;
 }
-#access ul ul ul {
+#navi ul ul ul {
 	left: 100%;
 	top: 0;
 }
-#access ul ul a {
+#navi ul ul a {
 	background: #333;
 	line-height: 1em;
 	padding: 10px;
 	width: 160px;
 	height: auto;
 }
-#access li:hover > a,
-#access ul ul :hover > a {
+#navi li:hover > a,
+#navi ul ul :hover > a {
 	background: #333;
 	color: #fff;
 }
-#access ul li:hover > ul {
+#navi ul li:hover > ul {
 	display: block;
 }
-#access ul li.current_page_item > a,
-#access ul li.current-menu-ancestor > a,
-#access ul li.current-menu-item > a,
-#access ul li.current-menu-parent > a {
+#navi ul li.current_page_item > a,
+#navi ul li.current-menu-ancestor > a,
+#navi ul li.current-menu-item > a,
+#navi ul li.current-menu-parent > a {
 	color: #fff;
 }
-* html #access ul li.current_page_item a,
-* html #access ul li.current-menu-ancestor a,
-* html #access ul li.current-menu-item a,
-* html #access ul li.current-menu-parent a,
-* html #access ul li a:hover {
+* html #navi ul li.current_page_item a,
+* html #navi ul li.current-menu-ancestor a,
+* html #navi ul li.current-menu-item a,
+* html #navi ul li.current-menu-parent a,
+* html #navi ul li a:hover {
 	color: #fff;
 }
 
@@ -1220,7 +1220,7 @@ h3#reply-title {
 #footer {
 	margin-bottom: 20px;
 }
-#colophon {
+#copyright {
 	margin-top: -4px;
 	overflow: hidden;
 	padding: 18px 0;
@@ -1232,11 +1232,11 @@ h3#reply-title {
 	color: #000;
 	text-decoration: none;
 }
-#site-generator {
+#credits {
 	font-style: italic;
 	position: relative;
 }
-#site-generator a {
+#credits a {
 	/*background: url(images/toll.png) center left no-repeat;*/
 	color: #666;
 	display: inline-block;
@@ -1244,7 +1244,7 @@ h3#reply-title {
 	padding-left: 20px;
 	text-decoration: none;
 }
-#site-generator a:hover {
+#credits a:hover {
 	text-decoration: underline;
 }
 img#wpstats {
@@ -1262,7 +1262,7 @@ pre {
 code {
 	-webkit-text-size-adjust: 160%;
 }
-#access,
+#navi,
 .entry-meta,
 .entry-utility,
 .navigation,
@@ -1291,7 +1291,7 @@ code {
 		border-bottom: 2pt solid #000;
 		padding-bottom: 18pt;
 	}
-	#colophon {
+	#copyright {
 		border-top: 2pt solid #000;
 	}
 	#site-title,
@@ -1311,8 +1311,8 @@ code {
 	.entry-title {
 		font-size: 21pt;
 	}
-	#access,
-	#branding img,
+	#navi,
+	#logo img,
 	#respond,
 	.comment-edit-link,
 	.edit-link,
@@ -1336,17 +1336,17 @@ code {
 		font-size: 11pt;
 	}
 	#site-info,
-	#site-generator {
+	#credits {
 		float: none;
 		width: auto;
 	}
-	#colophon {
+	#copyright {
 		width: auto;
 	}
 	img#wpstats {
 		display: none;
 	}
-	#site-generator a {
+	#credits a {
 		margin: 0;
 		padding: 0;
 	}
