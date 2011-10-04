@@ -429,9 +429,9 @@ function tollbros_comments() {
 
 function tollbros_slider() {
 		$options = get_option('tollbros_theme_options');
-	 	echo '<img src="'.$options['slider'].'"'.'/>';
-		echo '<img src="'.$options['slider2'].'"'.'/>';
-		echo '<img src="'.$options['slider3'].'"'.'/>';
+	 	echo '<img alt="slider1"  src="'.$options['slider'].'"'.'/>';
+		echo '<img alt="slider2" src="'.$options['slider2'].'"'.' />';
+		echo '<img alt="slider3" src="'.$options['slider3'].'"'.' />';
 		
 }
 
@@ -446,6 +446,21 @@ function tollbros_add_css() {
 		wp_enqueue_style('slider_css', get_bloginfo('template_url').'/css/slider.css');
 }
 add_action('admin_menu','tollbros_add_css');
+
+
+// Function/Hook to remove unnecessary stuff from wp_head()
+function tollbros_rmheadlink() {
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'start_post_rel_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'adjacent_posts_rel_link');
+}
+
+add_action('init','tollbros_rmheadlink');
+
+
 
 
 

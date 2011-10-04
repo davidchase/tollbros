@@ -18,7 +18,7 @@
 
 			<div id="site-generator">
 				<?php do_action( 'tollbros_credits' ); ?>
-				<a target="_blank" href="<?php echo esc_url( __( 'http://www.tollbrothers.com', 'tollbros' ) ); ?>" title="<?php esc_attr_e( 'Toll Brothers Inc', 'tollbros' ); ?>" rel="generator"><?php tollbros_footer_copy(); ?></a>
+				<a target="_blank" href="<?php echo esc_url( __( 'http://www.tollbrothers.com', 'tollbros' ) ); ?>" title="<?php esc_attr_e( 'Toll Brothers Inc', 'tollbros' ); ?>" rel="author"><?php tollbros_footer_copy(); ?></a>
 			</div><!-- #site-generator -->
 
 		</div><!-- #colophon -->
