@@ -429,21 +429,24 @@ function tollbros_comments() {
 
 function tollbros_slider() {
 		$options = get_option('tollbros_theme_options');
-	 	echo '<img alt="slider1"  src="'.$options['slider'].'"'.'/>';
-		echo '<img alt="slider2" src="'.$options['slider2'].'"'.' style="display:none;"/>';
-		echo '<img alt="slider3" src="'.$options['slider3'].'"'.' style="display:none;"/>';
+		$sliders = array($options['slider'],$options['slider2'],$options['slider3']);
+		foreach ($sliders as $slider) {
+			echo '<img width="950px" alt="Slider Images"  src="'.$slider.'"'.'/>';
+		}
 		
 }
 
 function tollbros_add_js() {
 	wp_enqueue_script('cycle_script', get_bloginfo('template_url').'/js/jquery.cycle.all.js');
-	wp_enqueue_script('slider_script', get_bloginfo('template_url').'/js/addbox.js');	
+	wp_enqueue_script('slider_script', get_bloginfo('template_url').'/js/addbox.js');
+	
 }
 
 add_action('admin_menu','tollbros_add_js');
 
 function tollbros_add_css() {
 		wp_enqueue_style('slider_css', get_bloginfo('template_url').'/css/slider.css');
+		wp_enqueue_style('admin_css', get_bloginfo('template_url').'/css/admin.css');
 }
 add_action('admin_menu','tollbros_add_css');
 

@@ -14,7 +14,7 @@ function theme_options_init(){
  * Load up the menu page
  */
 function theme_options_add_page() {
-	add_theme_page( __( 'Theme Options', 'tollbrostheme' ), __( 'Theme Options', 'tollbrostheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+	add_menu_page( __( 'Toll Bros Options', 'tollbrostheme' ), __( 'Toll Bros Options', 'tollbrostheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page');
 }
 
 /**
@@ -75,7 +75,7 @@ function theme_options_do_page() {
 		<div class="updated fade"><p><strong><?php _e( 'Theme Options Saved', 'tollbrostheme' ); ?></strong></p></div>
 		<?php endif; ?>
 
-		<form method="post" action="options.php">
+		<form method="post" action="options.php" id="options">
 			<?php settings_fields( 'tollbros_options' ); ?>
 			<?php $options = get_option( 'tollbros_theme_options' ); ?>
 
@@ -103,7 +103,7 @@ function theme_options_do_page() {
 				 * A tollbros select input option
 				 */
 				?>
-				<!-- <tr valign="top"><th scope="row"><?php _e( 'Select input', 'tollbrostheme' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Select input', 'tollbrostheme' ); ?></th>
 					<td>
 						<select name="tollbros_theme_options[selectinput]">
 							<?php
@@ -123,7 +123,7 @@ function theme_options_do_page() {
 						</select>
 						<label class="description" for="tollbros_theme_options[selectinput]"><?php _e( 'tollbros select input', 'tollbrostheme' ); ?></label>
 					</td>
-				</tr> -->
+				</tr> 
 
 				<?php
 				/**
@@ -167,13 +167,13 @@ function theme_options_do_page() {
 					<td>
 						<input id="tollbros_theme_options[slider]" class="regular-text" type="text" name="tollbros_theme_options[slider]" value="<?php esc_attr_e( $options['slider'] ); ?>" />
 						<br/>
-						<label class="description" for="tollbros_theme_options[slider]"><?php _e( '', 'tollbrostheme' ); ?></label>
+						<label class="description" for="tollbros_theme_options[slider2]"><?php _e( '', 'tollbrostheme' ); ?></label>
 						<input id="tollbros_theme_options[slider2]" class="regular-text" type="text" name="tollbros_theme_options[slider2]" value="<?php esc_attr_e( $options['slider2'] ); ?>" />
 						<br/>
-						<label class="description" for="tollbros_theme_options[slider2]"><?php _e( '', 'tollbrostheme' ); ?></label>
+						<label class="description" for="tollbros_theme_options[slider3]"><?php _e( '', 'tollbrostheme' ); ?></label>
 						<input id="tollbros_theme_options[slider3]" class="regular-text" type="text" name="tollbros_theme_options[slider3]" value="<?php esc_attr_e( $options['slider3'] ); ?>" />
 						<br/>
-						<label class="description" for="tollbros_theme_options[slider3]"><?php _e( '', 'tollbrostheme' ); ?></label>
+						<label class="description" for="tollbros_theme_options[slider]"><?php _e( '', 'tollbrostheme' ); ?></label>
 						<div id="holder"></div>
 						<a href="#" id="add">Add</a>
 						
