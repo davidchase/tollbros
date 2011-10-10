@@ -17,6 +17,26 @@ function theme_options_add_page() {
 	add_menu_page( __( 'Toll Bros Options', 'tollbrostheme' ), __( 'Toll Bros Options', 'tollbrostheme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page');
 }
 
+
+
+// Add Custom JS
+add_action('admin_menu','tollbros_add_js');
+
+function tollbros_add_js() {
+	wp_enqueue_script('cycle_script', get_bloginfo('template_url').'/js/jquery.cycle.all.js');
+	wp_enqueue_script('slider_script', get_bloginfo('template_url').'/js/addbox.js');
+	
+}
+//Add Custom CSS
+add_action('admin_menu','tollbros_add_css');
+
+function tollbros_add_css() {
+		wp_enqueue_style('slider_css', get_bloginfo('template_url').'/css/slider.css');
+		wp_enqueue_style('admin_css', get_bloginfo('template_url').'/css/admin.css');
+}
+
+
+
 /**
  * Create arrays for our select and radio options
  */

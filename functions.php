@@ -436,22 +436,14 @@ function tollbros_slider() {
 		
 }
 
-function tollbros_add_js() {
-	wp_enqueue_script('cycle_script', get_bloginfo('template_url').'/js/jquery.cycle.all.js');
-	wp_enqueue_script('slider_script', get_bloginfo('template_url').'/js/addbox.js');
-	
-}
 
-add_action('admin_menu','tollbros_add_js');
 
-function tollbros_add_css() {
-		wp_enqueue_style('slider_css', get_bloginfo('template_url').'/css/slider.css');
-		wp_enqueue_style('admin_css', get_bloginfo('template_url').'/css/admin.css');
-}
-add_action('admin_menu','tollbros_add_css');
 
 
 // Function/Hook to remove unnecessary	 stuff from wp_head()
+
+add_action('init','tollbros_rmheadlink');
+
 function tollbros_rmheadlink() {
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
@@ -461,7 +453,8 @@ remove_action('wp_head', 'index_rel_link');
 remove_action('wp_head', 'adjacent_posts_rel_link');
 }
 
-add_action('init','tollbros_rmheadlink');
+
+
 
 
 
